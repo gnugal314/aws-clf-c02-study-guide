@@ -1,4 +1,4 @@
-# AWS CLF-C02 Master Service Differentiation Table
+# AWS CLF-C02 Master Service Comparison Table
 
 | Similar Services                     | Key Differences                                                                                                                |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |

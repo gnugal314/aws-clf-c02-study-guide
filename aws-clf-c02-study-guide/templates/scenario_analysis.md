@@ -582,31 +582,187 @@ This question tests two major AWS cost optimization concepts:
 
 An e-commerce company wants to modernize their infrastructure and move it to the AWS Cloud. Which option can BEST assist the company to realize these goals?
 
-### Correct Answer
+**A. AWS App Runner**
 
-**Agility and Elasticity**
+**B. AWS Partner Network (APN)**
 
-### Business Problem
+**C. AWS Artifact**
 
-Cloud modernization.
+**D. Amazon EC2**
 
-### Service Category
+---
 
-Cloud Concepts
+# Correct Answer
 
-### Service
+## ✅ B. AWS Partner Network (APN)
 
-AWS Cloud Benefits
+---
 
-### Trigger Words
+# Business Problem
 
-* modernize
-* cloud migration
-* agility
+The company wants assistance modernizing infrastructure and migrating workloads to AWS but may not have the expertise required to perform the transformation independently.
 
-### Why This Is Correct
+---
 
-Cloud adoption provides agility, elasticity, and faster innovation.
+# Service Category
+
+Cloud Adoption & Migration
+
+---
+
+# Service
+
+AWS Partner Network (APN)
+
+---
+
+# Trigger Words
+
+| Trigger Words            | Think                   |
+| ------------------------ | ----------------------- |
+| Modernize Infrastructure | Cloud Adoption          |
+| Move to AWS              | Migration               |
+| Assistance               | AWS Partner Network     |
+| AWS Expertise            | AWS Partner Network     |
+| Transformation           | AWS Consulting Partners |
+| Guidance                 | AWS Partner Network     |
+
+---
+
+# Why This Is Correct
+
+The AWS Partner Network (APN) is a global network of AWS Partners that help customers:
+
+* Design cloud architectures
+* Migrate applications
+* Modernize infrastructure
+* Implement cloud-native solutions
+* Accelerate cloud adoption
+
+The question asks:
+
+> "Which option can BEST assist the company?"
+
+The key phrase is:
+
+**BEST assist**
+
+This points to a program that provides expertise and guidance rather than a technical AWS service.
+
+---
+
+# Business Problem → Service Category → Service
+
+```text
+Need Help Modernizing Infrastructure
+                ↓
+Cloud Adoption & Migration
+                ↓
+AWS Partner Network (APN)
+```
+
+---
+
+# Why A. AWS App Runner Is Incorrect
+
+### What It Does
+
+AWS App Runner is a fully managed service used to deploy web applications and APIs.
+
+### Why Eliminate
+
+The question is not asking:
+
+> "How do I run an application?"
+
+It is asking:
+
+> "How do I get assistance modernizing my environment?"
+
+App Runner is a deployment service, not a modernization consulting service.
+
+---
+
+# Why C. AWS Artifact Is Incorrect
+
+### What It Does
+
+AWS Artifact provides:
+
+* Compliance reports
+* Security certifications
+* Audit documentation
+
+### Why Eliminate
+
+Artifact supports governance and compliance.
+
+It does not help customers modernize or migrate workloads.
+
+---
+
+# Why D. Amazon EC2 Is Incorrect
+
+### What It Does
+
+Amazon EC2 provides virtual servers in the cloud.
+
+### Why Eliminate
+
+EC2 is a compute service.
+
+The question asks for assistance with modernization, not compute infrastructure.
+
+---
+
+# Similar Services to Eliminate
+
+| Service                   | Purpose                                | Why Not Correct                      |
+| ------------------------- | -------------------------------------- | ------------------------------------ |
+| AWS App Runner            | Managed application hosting            | Does not provide migration expertise |
+| AWS Artifact              | Compliance documentation               | Compliance-focused service           |
+| Amazon EC2                | Virtual servers                        | Compute service only                 |
+| AWS Partner Network (APN) | Migration and modernization assistance | ✅ Correct Answer                     |
+
+---
+
+# Exam Memory Aid
+
+```text
+Need AWS Expertise
+        ↓
+AWS Partner Network (APN)
+
+Need Compliance Reports
+        ↓
+AWS Artifact
+
+Need Virtual Servers
+        ↓
+Amazon EC2
+
+Need Managed Web App Hosting
+        ↓
+AWS App Runner
+```
+
+---
+
+# CLF-C02 Takeaway
+
+When the question asks:
+
+* Who can help migrate workloads?
+* Who can help modernize infrastructure?
+* Who can provide AWS expertise?
+* Who can assist with cloud transformation?
+
+Think:
+
+## ✅ AWS Partner Network (APN)
+
+This is a common CLF-C02 pattern where the correct answer is an AWS program or ecosystem resource rather than a technical service.
+
 
 ---
 

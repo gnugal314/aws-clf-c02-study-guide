@@ -6,228 +6,61 @@
 
 # Question 1
 
-## Question
+## Original Question
 
 Your colleague wants to create certain Amazon EC2 and Amazon S3 resources in an automated fashion using AWS CloudFormation. However, they reached out to you asking for help to understand pricing. Which option will provide them with the information they need?
 
-**A.** AWS will charge for Amazon EC2 and Amazon S3. There is no charge for AWS CloudFormation.
+### Correct Answer
 
-**B.** You will be priced for Amazon EC2 and Amazon S3 only. The Amazon EC2 pricing will not vary depending on the region.
+**A. AWS will charge for Amazon EC2 and Amazon S3. There is no charge for AWS CloudFormation.**
 
-**C.** You will be charged for AWS CloudFormation, Amazon EC2 and Amazon S3. The Amazon EC2 pricing will not vary depending on the region.
+### Business Problem
 
-**D.** You will be charged for AWS CloudFormation, Amazon EC2 and Amazon S3. The Amazon EC2 pricing will vary depending on the region.
+Understand AWS pricing for infrastructure deployed using Infrastructure as Code (IaC).
 
----
-
-# Correct Answer
-
-## ✅ A. AWS will charge for Amazon EC2 and Amazon S3. There is no charge for AWS CloudFormation.
-
----
-
-# CLF-C02 Exam Strategy
-
-## Business Problem
-
-Understand AWS pricing when provisioning infrastructure using Infrastructure as Code (IaC).
-
-## Service Category
+### Service Category
 
 Billing & Cost Optimization
 
-## Service
+### Service
 
 AWS CloudFormation
 
----
+### Trigger Words
 
-# Trigger Words
-
-| Trigger Words           | Think                       |
-| ----------------------- | --------------------------- |
-| CloudFormation          | Infrastructure as Code      |
-| Automated deployment    | CloudFormation              |
-| Provision AWS resources | CloudFormation              |
-| Pricing                 | Billing & Cost Optimization |
-
----
-
-# Why This Is Correct
-
-AWS CloudFormation itself is **free**.
-
-CloudFormation is an orchestration service that creates and manages AWS resources.
-
-You are charged only for the resources created by CloudFormation.
-
-Examples include:
-
-* Amazon EC2
-* Amazon S3
-* Amazon RDS
-* AWS Lambda
-* Elastic Load Balancers
-
-### Architecture Concept
-
-```text
-CloudFormation Template
-          ↓
-Creates Resources
-          ↓
-EC2, S3, RDS, Lambda
-          ↓
-Charges Apply To Resources
-```
-
-CloudFormation acts as the deployment engine.
-
-The deployed resources generate the charges.
-
----
-
-# Why Option B Is Incorrect
-
-### Statement
-
-> You will be priced for Amazon EC2 and Amazon S3 only. The Amazon EC2 pricing will not vary depending on the region.
-
-### Analysis
-
-The first statement is correct.
-
-The second statement is incorrect.
-
-Amazon EC2 pricing varies by AWS Region.
-
-### Example
-
-| Region                | Pricing   |
-| --------------------- | --------- |
-| US East (N. Virginia) | Lower     |
-| Europe (Frankfurt)    | Different |
-| Asia Pacific (Tokyo)  | Different |
-
----
-
-# Why Option C Is Incorrect
-
-### Statement
-
-> You will be charged for AWS CloudFormation, Amazon EC2 and Amazon S3.
-
-### Analysis
-
-CloudFormation is free.
-
-Because this statement incorrectly charges for CloudFormation, the answer is incorrect.
-
----
-
-# Why Option D Is Incorrect
-
-### Statement
-
-> You will be charged for AWS CloudFormation, Amazon EC2 and Amazon S3. The Amazon EC2 pricing will vary depending on the region.
-
-### Analysis
-
-The region pricing statement is true.
-
-However, CloudFormation is still free.
-
-Since the answer incorrectly states CloudFormation incurs charges, the answer is incorrect.
-
----
-
-# Similar Services To Eliminate
-
-| Service             | Why Eliminate                                                 |
-| ------------------- | ------------------------------------------------------------- |
-| Cost Explorer       | Analyzes existing AWS spend                                   |
-| AWS Budgets         | Creates spending alerts                                       |
-| Cost & Usage Report | Historical billing details                                    |
-| Pricing Calculator  | Estimates future costs but is not the answer to this question |
-
----
-
-# Key CLF-C02 Exam Concepts
-
-## Infrastructure as Code (IaC)
-
-CloudFormation allows you to define infrastructure using code templates.
-
-## AWS Managed Service Pricing
-
-Many AWS management services are free.
-
-Examples:
-
-| Service        | Charged? |
-| -------------- | -------- |
-| CloudFormation | No       |
-| IAM            | No       |
-| VPC            | No       |
-| Organizations  | No       |
-| EC2            | Yes      |
-| S3             | Yes      |
-| RDS            | Yes      |
-
----
-
-# Fast Recall Memory Aid
-
-## Question Pattern
-
-> "I am using CloudFormation. What am I paying for?"
-
-### Correct Response
-
-You pay for:
-
+* CloudFormation
+* pricing
 * EC2
 * S3
-* RDS
-* Lambda
-* Other provisioned resources
+* automated provisioning
 
-You do NOT pay for:
+### Why This Is Correct
 
-* CloudFormation itself
+CloudFormation is free. Customers pay only for the AWS resources created by CloudFormation.
 
----
+### Similar Services to Eliminate
 
-# Exam Takeaway
-
-When you see:
-
-**CloudFormation**
-
-Ask yourself:
-
-> "Am I paying for CloudFormation or the resources it creates?"
-
-### Correct Answer
-
-You pay for the resources.
-
-CloudFormation itself is free.
-
-**Final Answer: A**
-
+| Service             | Why Eliminate           |
+| ------------------- | ----------------------- |
+| Cost Explorer       | Analyzes existing spend |
+| AWS Budgets         | Creates spending alerts |
+| Cost & Usage Report | Historical billing data |
 
 ---
 
 # Question 2
 
-## Question
+## Original Question
 
 During a recent outage a number of static file uploads were lost and irretrievable. Your manager has tasked you with finding a more durable solution. Which service could be used with the least operational overhead?
 
+### Correct Answer
+
+**Amazon S3**
+
 ### Business Problem
 
-Durable file storage.
+Highly durable file storage.
 
 ### Service Category
 
@@ -242,13 +75,13 @@ Amazon S3
 * static files
 * durability
 * lost uploads
-* minimal operational overhead
+* operational overhead
 
 ### Why This Is Correct
 
-Amazon S3 provides 99.999999999% durability and is fully managed.
+S3 provides 11 nines of durability and is fully managed.
 
-### Eliminate Similar Services
+### Similar Services to Eliminate
 
 | Service        | Why Eliminate     |
 | -------------- | ----------------- |
@@ -260,17 +93,21 @@ Amazon S3 provides 99.999999999% durability and is fully managed.
 
 # Question 3
 
-## Question
+## Original Question
 
 Your company wants you to focus on running and monitoring your cloud applications in a way that drives continuous improvement to procedures and processes. Which AWS Well-Architected pillar will help you identify the responsibilities in this scenario?
 
+### Correct Answer
+
+**Operational Excellence**
+
 ### Business Problem
 
-Improve operational processes.
+Continuous operational improvement.
 
 ### Service Category
 
-Well-Architected Framework
+AWS Well-Architected Framework
 
 ### Service
 
@@ -280,14 +117,14 @@ Operational Excellence Pillar
 
 * continuous improvement
 * monitoring
-* operations
 * procedures
+* operations
 
 ### Why This Is Correct
 
-Operational Excellence focuses on monitoring, automation, and continual improvement.
+The Operational Excellence pillar focuses on monitoring, automation, and process improvement.
 
-### Eliminate Similar Pillars
+### Similar Services to Eliminate
 
 | Pillar            | Why Eliminate      |
 | ----------------- | ------------------ |
@@ -299,13 +136,17 @@ Operational Excellence focuses on monitoring, automation, and continual improvem
 
 # Question 4
 
-## Question
+## Original Question
 
 Your company is deploying a web application in AWS running on several Amazon EC2 instances. What is the responsibility of AWS under the shared responsibility model?
 
+### Correct Answer
+
+**Physical infrastructure, hardware, networking, and facilities security**
+
 ### Business Problem
 
-Determine AWS responsibilities.
+Understand AWS responsibilities.
 
 ### Service Category
 
@@ -313,42 +154,41 @@ Security
 
 ### Service
 
-Security OF the Cloud
+Shared Responsibility Model
 
 ### Trigger Words
 
-* shared responsibility
 * EC2
-* AWS responsibility
+* responsibility
+* shared responsibility
 
 ### Why This Is Correct
 
-AWS manages:
+AWS secures the infrastructure that runs AWS services.
 
-* hardware
-* networking infrastructure
-* data centers
-* physical security
-
-### Eliminate Customer Responsibilities
+### Similar Services to Eliminate
 
 | Responsibility  | Owner    |
 | --------------- | -------- |
 | OS patching     | Customer |
-| Security groups | Customer |
+| Security Groups | Customer |
 | IAM permissions | Customer |
 
 ---
 
 # Question 5
 
-## Question
+## Original Question
 
-Your company's finance team wants to use their own business intelligence tool to visualize cost and usage. They want detailed billing line items for the last three years automatically available in a persistent store for their business intelligence tool without writing any scripts.
+Your company's finance team wants to use their own business intelligence tool to visualize cost and usage. They want detailed billing line items for the last three years automatically available in a persistent store for their business intelligence tool without writing any scripts. Which AWS tool meets their requirements?
+
+### Correct Answer
+
+**AWS Cost & Usage Report (CUR)**
 
 ### Business Problem
 
-Detailed billing exports.
+Detailed billing and usage exports.
 
 ### Service Category
 
@@ -356,38 +196,41 @@ Billing & Cost Optimization
 
 ### Service
 
-Cost & Usage Report (CUR)
+Cost & Usage Report
 
 ### Trigger Words
 
 * detailed billing
 * line items
+* three years
 * BI tool
-* historical costs
 
 ### Why This Is Correct
 
-CUR provides the most detailed billing and usage information.
+CUR provides the most detailed billing and usage data available.
 
-### Eliminate Similar Services
+### Similar Services to Eliminate
 
-| Service            | Why Eliminate      |
-| ------------------ | ------------------ |
-| Cost Explorer      | Visualization only |
-| AWS Budgets        | Alerts only        |
-| Pricing Calculator | Future estimates   |
+| Service       | Why Eliminate      |
+| ------------- | ------------------ |
+| Cost Explorer | Visualization only |
+| AWS Budgets   | Alerts only        |
 
 ---
 
 # Question 6
 
-## Question
+## Original Question
 
-A customer would like to design and build a new workload on the AWS Cloud but does not have the AWS expertise to get started.
+A customer would like to design and build a new workload on the AWS Cloud but does not have the AWS expertise to get started. Which AWS program can a customer take advantage of to achieve that outcome?
+
+### Correct Answer
+
+**AWS Professional Services**
 
 ### Business Problem
 
-AWS implementation assistance.
+Need AWS implementation expertise.
 
 ### Service Category
 
@@ -405,26 +248,23 @@ AWS Professional Services
 
 ### Why This Is Correct
 
-AWS Professional Services helps customers architect and implement solutions.
-
-### Eliminate Similar Services
-
-| Service         | Why Eliminate                      |
-| --------------- | ---------------------------------- |
-| Trusted Advisor | Recommendations only               |
-| Support Plans   | Support, not architecture services |
+AWS Professional Services assists customers with architecture and implementation.
 
 ---
 
 # Question 7
 
-## Question
+## Original Question
 
-Your company is migrating to the AWS Cloud. As the network administrator, you are responsible for managing the physical network in the datacenter. What cloud role might you transition to?
+Your company is migrating to the AWS Cloud. As the network administrator, you are responsible for managing the physical network in the datacenter. What cloud role might you transition to that would be the closest fit to your current role?
+
+### Correct Answer
+
+**Cloud Network Engineer**
 
 ### Business Problem
 
-Cloud networking career alignment.
+Networking career transition.
 
 ### Service Category
 
@@ -432,7 +272,7 @@ Networking
 
 ### Service
 
-Cloud Network Engineer
+VPC, Route Tables, Direct Connect, Transit Gateway
 
 ### Trigger Words
 
@@ -442,20 +282,19 @@ Cloud Network Engineer
 
 ### Why This Is Correct
 
-Networking skills directly transfer to:
-
-* VPC
-* Route Tables
-* Transit Gateway
-* Direct Connect
+Traditional networking skills translate directly to AWS networking services.
 
 ---
 
 # Question 8
 
-## Question
+## Original Question
 
-A company wants to migrate their on-premises database to Amazon EC2. This database holds data that needs to be accessed quickly and requires high performance.
+A company wants to migrate their on-premises database to Amazon EC2. This database holds data that needs to be accessed quickly and requires high performance. Which EC2 instance type would be BEST suited for this scenario?
+
+### Correct Answer
+
+**Memory Optimized Instance**
 
 ### Business Problem
 
@@ -467,7 +306,7 @@ Compute
 
 ### Service
 
-Memory Optimized EC2 Instance
+Memory Optimized EC2
 
 ### Trigger Words
 
@@ -477,27 +316,23 @@ Memory Optimized EC2 Instance
 
 ### Why This Is Correct
 
-Memory Optimized instances are designed for large in-memory databases.
-
-### Eliminate Similar Services
-
-| Instance Type     | Why Eliminate            |
-| ----------------- | ------------------------ |
-| General Purpose   | Balanced workloads       |
-| Compute Optimized | CPU intensive            |
-| Storage Optimized | Storage throughput focus |
+Memory optimized instances are designed for large in-memory databases.
 
 ---
 
 # Question 9
 
-## Question
+## Original Question
 
-Your customer wants to know how security and compliance is shared between AWS and the customer.
+Your customer wants to know how security and compliance is shared between AWS and the customer. Under the AWS Shared Responsibility Model, what are your suggested shared controls between the customer and AWS?
+
+### Correct Answer
+
+**Patch Management, Configuration Management, Awareness & Training**
 
 ### Business Problem
 
-Shared Responsibility Model.
+Understand shared controls.
 
 ### Service Category
 
@@ -505,29 +340,29 @@ Security
 
 ### Service
 
-Shared Controls
+Shared Responsibility Model
 
 ### Trigger Words
 
 * shared controls
 * compliance
-* shared responsibility
+* responsibility
 
 ### Why This Is Correct
 
-Both AWS and customer participate in:
-
-* patch management
-* configuration management
-* awareness training
+Certain controls require participation from both AWS and customers.
 
 ---
 
 # Question 10
 
-## Question
+## Original Question
 
-A startup company wants to minimize the cost of running Amazon EC2.
+A small startup company wants to deploy a new web application in the cloud. The company's IT team is familiar with AWS and has decided to use Amazon EC2 for the deployment. The budget is limited and they want to minimize the cost of running the application. Which of the following options should the company choose to minimize the cost of running the application on Amazon EC2?
+
+### Correct Answer
+
+**Spot Instances**
 
 ### Business Problem
 
@@ -544,58 +379,58 @@ Spot Instances
 ### Trigger Words
 
 * minimize cost
-* lowest cost
+* startup
 * EC2
 
 ### Why This Is Correct
 
-Spot Instances provide the lowest-cost EC2 pricing.
-
-### Eliminate Similar Services
-
-| Service            | Why Eliminate       |
-| ------------------ | ------------------- |
-| On-Demand          | Higher cost         |
-| Reserved Instances | Commitment required |
-| Savings Plans      | Commitment required |
+Spot Instances provide the lowest EC2 pricing.
 
 ---
 
 # Question 11
 
-## Question
+## Original Question
 
-An e-commerce company wants to modernize their infrastructure and move it to the AWS Cloud.
+An e-commerce company wants to modernize their infrastructure and move it to the AWS Cloud. Which option can BEST assist the company to realize these goals?
+
+### Correct Answer
+
+**Agility and Elasticity**
 
 ### Business Problem
 
-Cloud adoption and modernization.
+Cloud modernization.
 
 ### Service Category
 
-Cloud Benefits
+Cloud Concepts
 
 ### Service
 
-Agility and Elasticity
+AWS Cloud Benefits
 
 ### Trigger Words
 
 * modernize
 * cloud migration
-* transformation
+* agility
 
 ### Why This Is Correct
 
-AWS enables faster innovation, scalability, and operational agility.
+Cloud adoption provides agility, elasticity, and faster innovation.
 
 ---
 
 # Question 12
 
-## Question
+## Original Question
 
 Your application is running on Amazon EC2 instances. Which component of the AWS global infrastructure will you use to make your application resilient and highly available?
+
+### Correct Answer
+
+**Availability Zones**
 
 ### Business Problem
 
@@ -613,30 +448,27 @@ Availability Zones
 
 * resilient
 * highly available
-* fault tolerance
+* fault tolerant
 
 ### Why This Is Correct
 
-Availability Zones provide isolation from failures.
-
-### Eliminate Similar Services
-
-| Service       | Why Eliminate         |
-| ------------- | --------------------- |
-| Region        | Too broad             |
-| Edge Location | Content delivery only |
+Availability Zones isolate failures within a Region.
 
 ---
 
 # Question 13
 
-## Question
+## Original Question
 
-A batch job runs twice a week for 30 minutes and is tolerant to interruptions.
+Your company has a batch job that runs twice a week for 30 minutes to catalog certain items and is tolerant to interruptions. Which pricing model would meet the requirements and be the most cost effective?
+
+### Correct Answer
+
+**Spot Instances**
 
 ### Business Problem
 
-Lowest-cost interruptible workload.
+Interruptible batch processing.
 
 ### Service Category
 
@@ -649,7 +481,7 @@ Spot Instances
 ### Trigger Words
 
 * batch job
-* tolerant to interruptions
+* interruptions
 * cost effective
 
 ### Why This Is Correct
@@ -660,9 +492,13 @@ Spot Instances are ideal for interruptible workloads.
 
 # Question 14
 
-## Question
+## Original Question
 
-A company is migrating to cloud-native services.
+A company has an on-premises application that runs on virtual machines and uses a relational database in the backend. As the company migrates to the cloud, it is planning to leverage cloud native services. Which migration strategy is the company adopting in this scenario?
+
+### Correct Answer
+
+**Refactor / Re-Architect**
 
 ### Business Problem
 
@@ -674,7 +510,7 @@ Migration Strategies
 
 ### Service
 
-Refactor / Re-Architect
+Refactor
 
 ### Trigger Words
 
@@ -684,27 +520,23 @@ Refactor / Re-Architect
 
 ### Why This Is Correct
 
-Refactoring modifies applications to use cloud-native services.
-
-### Eliminate Similar Strategies
-
-| Strategy | Why Eliminate   |
-| -------- | --------------- |
-| Rehost   | Lift-and-shift  |
-| Relocate | Hypervisor move |
-| Retain   | No migration    |
+Refactoring modifies applications to take advantage of cloud-native services.
 
 ---
 
 # Question 15
 
-## Question
+## Original Question
 
-A highly regulated company needs operational, risk, and compliance auditing.
+You are employed at a company that is highly regulated. You are tasked with monitoring operational and risk auditing as well as compliance of your AWS account. Which AWS service can help you meet these audit requirements?
+
+### Correct Answer
+
+**AWS Config**
 
 ### Business Problem
 
-Compliance auditing.
+Compliance monitoring.
 
 ### Service Category
 
@@ -718,26 +550,23 @@ AWS Config
 
 * compliance
 * auditing
-* resource tracking
+* monitoring
 
 ### Why This Is Correct
 
-AWS Config tracks resource configurations and compliance.
-
-### Eliminate Similar Services
-
-| Service    | Why Eliminate     |
-| ---------- | ----------------- |
-| CloudWatch | Monitoring        |
-| CloudTrail | API activity only |
+AWS Config continuously evaluates resource compliance.
 
 ---
 
 # Question 16
 
-## Question
+## Original Question
 
-You want global low-latency access using CloudFront.
+Your application has a global reach and you would like to provide low latency access to your application globally by using Amazon CloudFront. What component of the AWS Global Infrastructure does Amazon CloudFront use?
+
+### Correct Answer
+
+**Edge Locations**
 
 ### Business Problem
 
@@ -749,36 +578,33 @@ Networking
 
 ### Service
 
-Edge Locations
+CloudFront
 
 ### Trigger Words
 
-* CloudFront
 * low latency
 * global users
+* CloudFront
 
 ### Why This Is Correct
 
-CloudFront uses Edge Locations for caching.
-
-### Eliminate Similar Components
-
-| Component         | Why Eliminate   |
-| ----------------- | --------------- |
-| Region            | Hosts resources |
-| Availability Zone | Fault isolation |
+CloudFront caches content in Edge Locations close to users.
 
 ---
 
 # Question 17
 
-## Question
+## Original Question
 
-How does AWS maintain the security and privacy of customer data?
+An enterprise is heavily dependent on their on-premises data center and are considering a potential migration to the cloud. One of the major concerns is security. How does AWS maintain the security and privacy of customer data?
+
+### Correct Answer
+
+**Through the Shared Responsibility Model and security controls built into AWS infrastructure**
 
 ### Business Problem
 
-Cloud security.
+Data security and privacy.
 
 ### Service Category
 
@@ -792,23 +618,27 @@ Shared Responsibility Model
 
 * security
 * privacy
-* customer data
+* migration
 
 ### Why This Is Correct
 
-AWS secures infrastructure while customers secure data and access.
+AWS secures the cloud infrastructure while customers secure their data and configurations.
 
 ---
 
 # Question 18
 
-## Question
+## Original Question
 
 You are working in a start-up company, which uses various AWS services. They have recently noticed a spike in the monthly AWS bill. The CTO is concerned about the cost and wants to act to reduce it. Which AWS service would be most effective on controlling AWS costs in this scenario?
 
+### Correct Answer
+
+**AWS Budgets**
+
 ### Business Problem
 
-Control AWS costs.
+Control spending.
 
 ### Service Category
 
@@ -821,31 +651,28 @@ AWS Budgets
 ### Trigger Words
 
 * cost spike
-* overspending
-* cost control
+* spending control
+* budget
 
 ### Why This Is Correct
 
-AWS Budgets proactively alerts on spending thresholds.
-
-### Eliminate Similar Services
-
-| Service       | Why Eliminate  |
-| ------------- | -------------- |
-| Cost Explorer | Analysis only  |
-| CUR           | Reporting only |
+AWS Budgets provides proactive alerts and controls.
 
 ---
 
 # Question 19
 
-## Question
+## Original Question
 
-Application servers in private subnets need internet access.
+A company has its application servers deployed in an AWS region in Amazon VPCs with private and public subnets. The application servers are placed in private subnets and often initiate requests to the internet. Which solution would BEST accomplish this task?
+
+### Correct Answer
+
+**NAT Gateway**
 
 ### Business Problem
 
-Outbound internet access from private subnet.
+Outbound internet access from private subnets.
 
 ### Service Category
 
@@ -858,24 +685,17 @@ NAT Gateway
 ### Trigger Words
 
 * private subnet
-* outbound internet
-* initiate requests
+* internet access
+* outbound requests
 
 ### Why This Is Correct
 
-NAT Gateway allows private subnet resources to access the internet without accepting inbound internet traffic.
+A NAT Gateway allows private subnet resources to access the internet while remaining private.
 
-### Eliminate Similar Services
+### Similar Services to Eliminate
 
 | Service          | Why Eliminate          |
 | ---------------- | ---------------------- |
-| Internet Gateway | Requires public subnet |
-| NAT Instance     | Legacy approach        |
-| Route 53         | DNS only               |
-
-### Memory Aid
-
-```text
-Public Subnet → Internet Gateway
-Private Subnet → NAT Gateway
-```
+| Internet Gateway | Used by public subnets |
+| Route 53         | DNS service            |
+| Load Balancer    | Traffic distribution   |

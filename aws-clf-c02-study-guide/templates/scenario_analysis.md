@@ -1043,3 +1043,251 @@ A NAT Gateway allows private subnet resources to access the internet while remai
 | Internet Gateway | Used by public subnets |
 | Route 53         | DNS service            |
 | Load Balancer    | Traffic distribution   |
+
+---
+
+## Reducing Amazon EC2 Spend
+
+### Original Question
+
+A large enterprise organization with many affiliates has migrated all of their on-premises steady-state workloads to the AWS Cloud. They notice a significant increase in Amazon EC2 spend over the last several months. Which of the following should they purchase to reduce the EC2 spend?
+
+**(Select TWO)**
+
+**A. AWS Cost Explorer**
+
+**B. Savings Plans**
+
+**C. AWS Budgets**
+
+**D. AWS Trusted Advisor**
+
+**E. Reserved Instances**
+
+---
+
+# Correct Answers
+
+## ✅ B. Savings Plans
+
+## ✅ E. Reserved Instances
+
+---
+
+# Business Problem
+
+The organization has predictable, steady-state workloads running continuously on Amazon EC2 and wants to reduce long-term compute costs.
+
+---
+
+# Service Category
+
+Billing & Cost Optimization
+
+---
+
+# Services
+
+* Savings Plans
+* Reserved Instances
+
+---
+
+# Trigger Words
+
+| Trigger Words            | Think                               |
+| ------------------------ | ----------------------------------- |
+| Steady-state workloads   | Predictable usage                   |
+| Running for months       | Long-term commitment                |
+| Reduce EC2 spend         | Savings Plans or Reserved Instances |
+| Large enterprise         | Significant compute usage           |
+| Purchase to reduce costs | Commitment-based discounts          |
+
+---
+
+# Why These Answers Are Correct
+
+## ✅ B. Savings Plans
+
+Savings Plans provide discounted pricing in exchange for a commitment to a consistent amount of compute usage.
+
+### Benefits
+
+* Lower compute costs
+* Flexible across eligible compute services
+* Easier management than Reserved Instances
+* Ideal for long-running workloads
+
+### Business Outcome
+
+```text
+Predictable Compute Usage
+            ↓
+Savings Plans
+            ↓
+Lower AWS Bill
+```
+
+---
+
+## ✅ E. Reserved Instances
+
+Reserved Instances provide discounted EC2 pricing for workloads that run continuously.
+
+### Benefits
+
+* Significant EC2 discounts
+* Ideal for predictable workloads
+* One-year or three-year commitment
+
+### Business Outcome
+
+```text
+Steady-State EC2 Workloads
+            ↓
+Reserved Instances
+            ↓
+Reduced EC2 Spend
+```
+
+---
+
+# Business Problem → Service Category → Service
+
+```text
+Need To Reduce Long-Term EC2 Costs
+                ↓
+Billing & Cost Optimization
+                ↓
+Savings Plans
+                ↓
+Reserved Instances
+```
+
+---
+
+# Why A. AWS Cost Explorer Is Incorrect
+
+### What It Does
+
+Cost Explorer analyzes and visualizes AWS spending.
+
+### Why Eliminate
+
+Cost Explorer helps identify cost trends but does not directly reduce costs.
+
+### Trigger Words
+
+* analyze spending
+* visualize costs
+* cost reporting
+
+---
+
+# Why C. AWS Budgets Is Incorrect
+
+### What It Does
+
+AWS Budgets creates alerts when spending thresholds are exceeded.
+
+### Why Eliminate
+
+Budgets help monitor costs but do not provide discounts.
+
+### Trigger Words
+
+* spending alerts
+* budget thresholds
+* notifications
+
+---
+
+# Why D. AWS Trusted Advisor Is Incorrect
+
+### What It Does
+
+Trusted Advisor provides recommendations for:
+
+* Cost optimization
+* Security
+* Performance
+* Reliability
+
+### Why Eliminate
+
+Trusted Advisor can recommend cost-saving opportunities but does not itself provide discounted pricing.
+
+### Trigger Words
+
+* recommendations
+* best practices
+* optimization guidance
+
+---
+
+# Similar Services to Eliminate
+
+| Service             | Purpose                        | Why Not Correct                |
+| ------------------- | ------------------------------ | ------------------------------ |
+| AWS Cost Explorer   | Cost analysis and reporting    | Does not reduce costs directly |
+| AWS Budgets         | Spending alerts                | Does not reduce costs directly |
+| AWS Trusted Advisor | Recommendations                | Does not provide discounts     |
+| Savings Plans       | Flexible compute discounts     | ✅ Correct                      |
+| Reserved Instances  | Predictable workload discounts | ✅ Correct                      |
+
+---
+
+# Cost Optimization Differentiation Table
+
+| Service            | Primary Benefit                      |
+| ------------------ | ------------------------------------ |
+| Savings Plans      | Flexible long-term compute discounts |
+| Reserved Instances | EC2-specific long-term discounts     |
+| Cost Explorer      | Cost analysis                        |
+| AWS Budgets        | Cost alerts                          |
+| Trusted Advisor    | Cost recommendations                 |
+
+---
+
+# Exam Memory Aid
+
+```text
+Need To Reduce Costs
+         ↓
+Purchase Discounts
+         ↓
+Savings Plans
+Reserved Instances
+
+Need To Analyze Costs
+         ↓
+Cost Explorer
+
+Need Cost Alerts
+         ↓
+AWS Budgets
+
+Need Recommendations
+         ↓
+Trusted Advisor
+```
+
+---
+
+# CLF-C02 Takeaway
+
+When you see:
+
+* Steady-state workloads
+* Predictable usage
+* Long-running EC2 instances
+* Reduce EC2 spend
+* Purchase something to lower costs
+
+Think:
+
+## ✅ Savings Plans
+
+## ✅ Reserved Instances
+
+These are the two primary AWS purchasing models designed specifically to reduce the cost of predictable compute workloads.

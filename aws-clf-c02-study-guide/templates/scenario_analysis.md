@@ -360,33 +360,221 @@ Certain controls require participation from both AWS and customers.
 
 A small startup company wants to deploy a new web application in the cloud. The company's IT team is familiar with AWS and has decided to use Amazon EC2 for the deployment. The budget is limited and they want to minimize the cost of running the application. Which of the following options should the company choose to minimize the cost of running the application on Amazon EC2?
 
-### Correct Answer
+**(Select TWO)**
 
-**Spot Instances**
+* A. On-Demand Instances
+* B. Reserved Instances
+* C. Spot Instances
+* D. Auto Scaling Groups
+* E. Dedicated Instances
 
-### Business Problem
+---
 
-Lowest-cost compute.
+# Correct Answers
 
-### Service Category
+## ✅ B. Reserved Instances
+
+## ✅ D. Auto Scaling Groups
+
+---
+
+# CLF-C02 Exam Strategy
+
+## Business Problem
+
+Deploy a production web application on Amazon EC2 while minimizing infrastructure costs.
+
+## Service Category
 
 Billing & Cost Optimization
 
-### Service
+## Services
 
-Spot Instances
-
-### Trigger Words
-
-* minimize cost
-* startup
-* EC2
-
-### Why This Is Correct
-
-Spot Instances provide the lowest EC2 pricing.
+* Reserved Instances
+* Auto Scaling Groups
 
 ---
+
+# Trigger Words
+
+| Trigger Words        | Think              |
+| -------------------- | ------------------ |
+| Web Application      | EC2                |
+| Limited Budget       | Cost Optimization  |
+| Minimize Cost        | Reserved Instances |
+| Reduce Waste         | Auto Scaling       |
+| Predictable Workload | Reserved Instances |
+| Variable Demand      | Auto Scaling       |
+
+---
+
+# Why B. Reserved Instances Is Correct
+
+Reserved Instances provide significant discounts compared to On-Demand pricing when a workload is predictable and expected to run continuously.
+
+### Benefits
+
+* Lower hourly cost
+* Predictable pricing
+* Ideal for long-running workloads
+* 1-year or 3-year commitment options
+
+### Business Outcome
+
+```text
+Predictable Web Application
+            ↓
+Reserved Instances
+            ↓
+Lower Compute Cost
+```
+
+---
+
+# Why D. Auto Scaling Groups Is Correct
+
+Auto Scaling automatically adjusts the number of EC2 instances based on application demand.
+
+### Benefits
+
+* Eliminates overprovisioning
+* Reduces idle infrastructure
+* Improves cost efficiency
+* Supports dynamic workloads
+
+### Business Outcome
+
+```text
+Low Traffic
+      ↓
+2 Instances
+
+High Traffic
+      ↓
+10 Instances
+
+Result:
+Only Pay For What You Need
+```
+
+---
+
+# Why A. On-Demand Instances Is Incorrect
+
+On-Demand pricing provides maximum flexibility but does not provide cost discounts.
+
+### When To Use
+
+* Short-term workloads
+* Testing environments
+* Unpredictable workloads
+
+### Why Eliminate
+
+The question specifically asks:
+
+> "Minimize cost"
+
+On-Demand is usually the most expensive pricing model.
+
+---
+
+# Why C. Spot Instances Is Incorrect
+
+Spot Instances provide the lowest-cost compute capacity but may be interrupted by AWS with little notice.
+
+### When To Use
+
+* Batch processing
+* Fault-tolerant workloads
+* Data analytics
+* Background jobs
+
+### Why Eliminate
+
+This scenario involves a production web application.
+
+```text
+Customer Traffic
+       ↓
+Spot Instance Interrupted
+       ↓
+Potential Application Outage
+```
+
+AWS generally expects Spot Instances to be used for interruptible workloads, not as the primary hosting mechanism for a startup's production web application.
+
+---
+
+# Why E. Dedicated Instances Is Incorrect
+
+Dedicated Instances run on hardware dedicated to a single customer.
+
+### Benefits
+
+* Hardware isolation
+* Compliance requirements
+* Regulatory requirements
+
+### Why Eliminate
+
+Dedicated Instances increase infrastructure costs.
+
+The scenario specifically states:
+
+> "The budget is limited."
+
+Dedicated Instances are typically among the most expensive deployment options.
+
+---
+
+# Similar Service Differentiation Table
+
+| Service             | Cost Impact                 | Best Use Case           |
+| ------------------- | --------------------------- | ----------------------- |
+| On-Demand Instances | Highest Cost                | Short-Term Workloads    |
+| Reserved Instances  | Lower Cost                  | Predictable Workloads   |
+| Spot Instances      | Lowest Cost                 | Interruptible Workloads |
+| Auto Scaling Groups | Reduces Waste               | Variable Demand         |
+| Dedicated Instances | Highest Infrastructure Cost | Compliance / Isolation  |
+
+---
+
+# Exam Memory Aid
+
+```text
+Predictable Workload
+        ↓
+Reserved Instances
+
+Variable Demand
+        ↓
+Auto Scaling
+
+Interruptible Workload
+        ↓
+Spot Instances
+
+Compliance / Isolation
+        ↓
+Dedicated Instances
+```
+
+---
+
+# CLF-C02 Takeaway
+
+This question tests two major AWS cost optimization concepts:
+
+1. Reserved Instances reduce the cost of predictable EC2 workloads.
+2. Auto Scaling reduces waste by dynamically adjusting capacity based on demand.
+
+### Final Answers
+
+✅ B. Reserved Instances
+
+✅ D. Auto Scaling Groups
+
 
 # Question 11
 

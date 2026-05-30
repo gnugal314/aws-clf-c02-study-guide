@@ -10,36 +10,212 @@
 
 Your colleague wants to create certain Amazon EC2 and Amazon S3 resources in an automated fashion using AWS CloudFormation. However, they reached out to you asking for help to understand pricing. Which option will provide them with the information they need?
 
-### Business Problem
+**A.** AWS will charge for Amazon EC2 and Amazon S3. There is no charge for AWS CloudFormation.
 
-Estimate AWS costs before deployment.
+**B.** You will be priced for Amazon EC2 and Amazon S3 only. The Amazon EC2 pricing will not vary depending on the region.
 
-### Service Category
+**C.** You will be charged for AWS CloudFormation, Amazon EC2 and Amazon S3. The Amazon EC2 pricing will not vary depending on the region.
+
+**D.** You will be charged for AWS CloudFormation, Amazon EC2 and Amazon S3. The Amazon EC2 pricing will vary depending on the region.
+
+---
+
+# Correct Answer
+
+## ✅ A. AWS will charge for Amazon EC2 and Amazon S3. There is no charge for AWS CloudFormation.
+
+---
+
+# CLF-C02 Exam Strategy
+
+## Business Problem
+
+Understand AWS pricing when provisioning infrastructure using Infrastructure as Code (IaC).
+
+## Service Category
 
 Billing & Cost Optimization
 
-### Service
+## Service
 
-AWS Pricing Calculator
+AWS CloudFormation
 
-### Trigger Words
+---
 
-* pricing
-* estimate costs
-* before deployment
-* CloudFormation
+# Trigger Words
 
-### Why This Is Correct
+| Trigger Words           | Think                       |
+| ----------------------- | --------------------------- |
+| CloudFormation          | Infrastructure as Code      |
+| Automated deployment    | CloudFormation              |
+| Provision AWS resources | CloudFormation              |
+| Pricing                 | Billing & Cost Optimization |
 
-AWS Pricing Calculator estimates future AWS costs before resources are provisioned.
+---
 
-### Eliminate Similar Services
+# Why This Is Correct
 
-| Service             | Why Eliminate           |
-| ------------------- | ----------------------- |
-| Cost Explorer       | Analyzes existing costs |
-| AWS Budgets         | Creates spending alerts |
-| Cost & Usage Report | Historical billing data |
+AWS CloudFormation itself is **free**.
+
+CloudFormation is an orchestration service that creates and manages AWS resources.
+
+You are charged only for the resources created by CloudFormation.
+
+Examples include:
+
+* Amazon EC2
+* Amazon S3
+* Amazon RDS
+* AWS Lambda
+* Elastic Load Balancers
+
+### Architecture Concept
+
+```text
+CloudFormation Template
+          ↓
+Creates Resources
+          ↓
+EC2, S3, RDS, Lambda
+          ↓
+Charges Apply To Resources
+```
+
+CloudFormation acts as the deployment engine.
+
+The deployed resources generate the charges.
+
+---
+
+# Why Option B Is Incorrect
+
+### Statement
+
+> You will be priced for Amazon EC2 and Amazon S3 only. The Amazon EC2 pricing will not vary depending on the region.
+
+### Analysis
+
+The first statement is correct.
+
+The second statement is incorrect.
+
+Amazon EC2 pricing varies by AWS Region.
+
+### Example
+
+| Region                | Pricing   |
+| --------------------- | --------- |
+| US East (N. Virginia) | Lower     |
+| Europe (Frankfurt)    | Different |
+| Asia Pacific (Tokyo)  | Different |
+
+---
+
+# Why Option C Is Incorrect
+
+### Statement
+
+> You will be charged for AWS CloudFormation, Amazon EC2 and Amazon S3.
+
+### Analysis
+
+CloudFormation is free.
+
+Because this statement incorrectly charges for CloudFormation, the answer is incorrect.
+
+---
+
+# Why Option D Is Incorrect
+
+### Statement
+
+> You will be charged for AWS CloudFormation, Amazon EC2 and Amazon S3. The Amazon EC2 pricing will vary depending on the region.
+
+### Analysis
+
+The region pricing statement is true.
+
+However, CloudFormation is still free.
+
+Since the answer incorrectly states CloudFormation incurs charges, the answer is incorrect.
+
+---
+
+# Similar Services To Eliminate
+
+| Service             | Why Eliminate                                                 |
+| ------------------- | ------------------------------------------------------------- |
+| Cost Explorer       | Analyzes existing AWS spend                                   |
+| AWS Budgets         | Creates spending alerts                                       |
+| Cost & Usage Report | Historical billing details                                    |
+| Pricing Calculator  | Estimates future costs but is not the answer to this question |
+
+---
+
+# Key CLF-C02 Exam Concepts
+
+## Infrastructure as Code (IaC)
+
+CloudFormation allows you to define infrastructure using code templates.
+
+## AWS Managed Service Pricing
+
+Many AWS management services are free.
+
+Examples:
+
+| Service        | Charged? |
+| -------------- | -------- |
+| CloudFormation | No       |
+| IAM            | No       |
+| VPC            | No       |
+| Organizations  | No       |
+| EC2            | Yes      |
+| S3             | Yes      |
+| RDS            | Yes      |
+
+---
+
+# Fast Recall Memory Aid
+
+## Question Pattern
+
+> "I am using CloudFormation. What am I paying for?"
+
+### Correct Response
+
+You pay for:
+
+* EC2
+* S3
+* RDS
+* Lambda
+* Other provisioned resources
+
+You do NOT pay for:
+
+* CloudFormation itself
+
+---
+
+# Exam Takeaway
+
+When you see:
+
+**CloudFormation**
+
+Ask yourself:
+
+> "Am I paying for CloudFormation or the resources it creates?"
+
+### Correct Answer
+
+You pay for the resources.
+
+CloudFormation itself is free.
+
+**Final Answer: A**
+
 
 ---
 

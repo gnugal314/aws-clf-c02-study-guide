@@ -218,37 +218,230 @@ CUR provides the most detailed billing and usage data available.
 
 ---
 
-# Question 6
+## AWS Expertise and Workload Design Assistance
 
-## Original Question
+### Original Question
 
 A customer would like to design and build a new workload on the AWS Cloud but does not have the AWS expertise to get started. Which AWS program can a customer take advantage of to achieve that outcome?
 
-### Correct Answer
+**A. AWS Partner Network (APN) Consulting Partners**
 
-**AWS Professional Services**
+**B. AWS Technical Account Managers (TAMs)**
 
-### Business Problem
+**C. AWS Support**
 
-Need AWS implementation expertise.
+**D. AWS Marketplace**
 
-### Service Category
+---
 
-Cloud Adoption
+# Correct Answer
 
-### Service
+## ✅ A. AWS Partner Network (APN) Consulting Partners
 
-AWS Professional Services
+---
 
-### Trigger Words
+# Business Problem
 
-* lacks expertise
-* design workload
-* build workload
+The customer needs expertise, guidance, and implementation assistance to design and build a new workload on AWS.
 
-### Why This Is Correct
+---
 
-AWS Professional Services assists customers with architecture and implementation.
+# Service Category
+
+Cloud Adoption & Migration
+
+---
+
+# Service
+
+AWS Partner Network (APN) Consulting Partners
+
+---
+
+# Trigger Words
+
+| Trigger Words       | Think                     |
+| ------------------- | ------------------------- |
+| Design a workload   | Architecture expertise    |
+| Build a workload    | Implementation assistance |
+| Lacks AWS expertise | Consulting Partner        |
+| Get started on AWS  | APN Consulting Partner    |
+| Cloud adoption      | AWS Partner Network       |
+
+---
+
+# Why This Is Correct
+
+AWS Partner Network (APN) Consulting Partners are organizations that help customers:
+
+* Design AWS architectures
+* Build cloud-native solutions
+* Migrate workloads
+* Modernize applications
+* Accelerate cloud adoption
+
+The key phrase in the question is:
+
+> "does not have the AWS expertise"
+
+This immediately points to obtaining external AWS expertise.
+
+### Business Outcome
+
+```text
+Customer Needs AWS Expertise
+             ↓
+Cloud Adoption & Migration
+             ↓
+APN Consulting Partner
+             ↓
+Design & Build AWS Workload
+```
+
+---
+
+# Business Problem → Service Category → Service
+
+```text
+Need AWS Expertise
+        ↓
+Cloud Adoption & Migration
+        ↓
+AWS Partner Network (APN)
+        ↓
+Consulting Partners
+```
+
+---
+
+# Why B. AWS Technical Account Managers (TAMs) Is Incorrect
+
+### What It Does
+
+A TAM provides:
+
+* Operational guidance
+* Best practices
+* Support planning
+* Trusted advisor services
+
+### Why Eliminate
+
+TAMs do not typically design and build workloads for customers.
+
+They provide guidance but are not implementation resources.
+
+### Trigger Words for TAM
+
+| Trigger Words        |
+| -------------------- |
+| Operational guidance |
+| Strategic advice     |
+| Enterprise support   |
+
+---
+
+# Why C. AWS Support Is Incorrect
+
+### What It Does
+
+AWS Support assists with:
+
+* Technical issues
+* Service questions
+* Troubleshooting
+
+### Why Eliminate
+
+Support helps resolve issues.
+
+Support does not design and build customer workloads.
+
+### Trigger Words for AWS Support
+
+| Trigger Words   |
+| --------------- |
+| Troubleshooting |
+| Technical issue |
+| Service problem |
+
+---
+
+# Why D. AWS Marketplace Is Incorrect
+
+### What It Does
+
+AWS Marketplace provides:
+
+* Third-party software
+* SaaS solutions
+* Commercial software products
+
+### Why Eliminate
+
+Marketplace helps customers purchase software.
+
+It does not provide workload architecture expertise.
+
+### Trigger Words for Marketplace
+
+| Trigger Words        |
+| -------------------- |
+| Purchase software    |
+| Third-party products |
+| SaaS applications    |
+
+---
+
+# Similar Services to Eliminate
+
+| Service                                       | Purpose                            | Why Not Correct           |
+| --------------------------------------------- | ---------------------------------- | ------------------------- |
+| AWS Partner Network (APN) Consulting Partners | Design and implement AWS solutions | ✅ Correct                 |
+| AWS Technical Account Manager (TAM)           | Strategic and operational guidance | Does not build workloads  |
+| AWS Support                                   | Technical assistance               | Troubleshooting focus     |
+| AWS Marketplace                               | Software procurement               | No architecture expertise |
+
+---
+
+# Exam Memory Aid
+
+```text
+Need AWS Expertise
+        ↓
+APN Consulting Partner
+
+Need Operational Guidance
+        ↓
+Technical Account Manager (TAM)
+
+Need Technical Support
+        ↓
+AWS Support
+
+Need Software
+        ↓
+AWS Marketplace
+```
+
+---
+
+# CLF-C02 Takeaway
+
+When you see:
+
+* Customer lacks AWS expertise
+* Design a workload
+* Build a workload
+* Migration assistance
+* Cloud adoption help
+
+Think:
+
+## ✅ AWS Partner Network (APN) Consulting Partners
+
+This is a common CLF-C02 pattern where AWS expects you to identify a program or partner ecosystem resource rather than a technical AWS service.
+
 
 ---
 

@@ -804,7 +804,7 @@ AWS secures infrastructure while customers secure data and access.
 
 ## Question
 
-AWS bill has unexpectedly increased.
+You are working in a start-up company, which uses various AWS services. They have recently noticed a spike in the monthly AWS bill. The CTO is concerned about the cost and wants to act to reduce it. Which AWS service would be most effective on controlling AWS costs in this scenario?
 
 ### Business Problem
 

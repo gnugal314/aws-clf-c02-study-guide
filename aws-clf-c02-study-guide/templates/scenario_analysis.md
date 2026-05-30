@@ -531,6 +531,297 @@ D. Awareness and Training
 
 E. Patch Management
 
+# AWS CLF-C02 Scenario Analysis
+
+## AWS Shared Responsibility Model – Shared Controls
+
+---
+
+# Correct Answers
+
+## ✅ D. Awareness and Training
+
+## ✅ E. Patch Management
+
+---
+
+# Business Problem
+
+The customer wants to understand which security and compliance controls are jointly managed by both AWS and the customer.
+
+---
+
+# Service Category
+
+Security
+
+---
+
+# Service
+
+AWS Shared Responsibility Model
+
+---
+
+# Trigger Words
+
+| Trigger Words               | Think                 |
+| --------------------------- | --------------------- |
+| Shared Responsibility Model | Shared Controls       |
+| Shared controls             | AWS + Customer        |
+| Security responsibilities   | Shared Responsibility |
+| Compliance                  | Shared Controls       |
+| Joint ownership             | Shared Controls       |
+
+---
+
+# Why These Answers Are Correct
+
+AWS classifies security controls into:
+
+* Inherited Controls
+* Shared Controls
+* Customer-Specific Controls
+
+### Shared Controls
+
+Shared controls require participation from both AWS and the customer.
+
+Examples include:
+
+* Patch Management
+* Configuration Management
+* Awareness and Training
+
+---
+
+## ✅ D. Awareness and Training
+
+Both AWS and customers participate in security awareness and training.
+
+### AWS Responsibilities
+
+* AWS trains AWS employees
+* AWS maintains security programs
+
+### Customer Responsibilities
+
+* Customer trains their users and administrators
+* Customer develops security awareness programs
+
+### Business Outcome
+
+```text
+Security Awareness
+        ↓
+AWS Training Programs
+        +
+Customer Training Programs
+        ↓
+Shared Control
+```
+
+---
+
+## ✅ E. Patch Management
+
+Patch management is considered a shared control because responsibility depends on the service model.
+
+### AWS Responsibilities
+
+AWS patches:
+
+* Physical infrastructure
+* Managed service infrastructure
+
+### Customer Responsibilities
+
+Customers patch:
+
+* Operating systems on EC2
+* Applications
+* Middleware
+
+### Business Outcome
+
+```text
+Infrastructure Patching
+         ↓
+AWS
+
+Guest OS Patching
+         ↓
+Customer
+
+Result
+         ↓
+Shared Control
+```
+
+---
+
+# Business Problem → Service Category → Service
+
+```text
+Need To Understand Security Ownership
+                  ↓
+Security
+                  ↓
+Shared Responsibility Model
+                  ↓
+Shared Controls
+                  ↓
+Awareness & Training
+Patch Management
+```
+
+---
+
+# Why A. Physical and Environmental Controls Is Incorrect
+
+### What It Is
+
+Physical security includes:
+
+* Data centers
+* Physical access controls
+* Environmental protections
+
+### Why Eliminate
+
+These are fully managed by AWS.
+
+Customers have no responsibility for AWS data center operations.
+
+### Ownership
+
+```text
+Physical Security
+        ↓
+AWS Only
+```
+
+---
+
+# Why B. Identity and Access Management Is Incorrect
+
+### What It Is
+
+IAM controls:
+
+* Users
+* Roles
+* Policies
+* Permissions
+
+### Why Eliminate
+
+IAM is considered a customer responsibility.
+
+Customers determine:
+
+* Who gets access
+* What permissions are granted
+* How authentication is configured
+
+### Ownership
+
+```text
+IAM
+  ↓
+Customer Responsibility
+```
+
+---
+
+# Why C. Data Encryption Is Incorrect
+
+### What It Is
+
+Data protection through encryption.
+
+### Why Eliminate
+
+Customers are generally responsible for:
+
+* Choosing encryption settings
+* Managing encryption policies
+* Managing encryption keys (when applicable)
+
+Encryption is typically considered a customer control rather than a shared control.
+
+### Ownership
+
+```text
+Data Encryption
+        ↓
+Customer Responsibility
+```
+
+---
+
+# Similar Controls to Eliminate
+
+| Control                           | Ownership | Why Not Correct   |
+| --------------------------------- | --------- | ----------------- |
+| Physical & Environmental Controls | AWS       | Inherited control |
+| Identity & Access Management      | Customer  | Customer control  |
+| Data Encryption                   | Customer  | Customer control  |
+| Awareness & Training              | Shared    | ✅ Correct         |
+| Patch Management                  | Shared    | ✅ Correct         |
+
+---
+
+# Shared Responsibility Quick Reference
+
+| Responsibility       | AWS | Customer | Shared |
+| -------------------- | --- | -------- | ------ |
+| Physical Security    | ✅   | ❌        | ❌      |
+| Data Centers         | ✅   | ❌        | ❌      |
+| IAM                  | ❌   | ✅        | ❌      |
+| Data Encryption      | ❌   | ✅        | ❌      |
+| Awareness & Training | ❌   | ❌        | ✅      |
+| Patch Management     | ❌   | ❌        | ✅      |
+
+---
+
+# Exam Memory Aid
+
+```text
+Security OF The Cloud
+          ↓
+AWS
+
+Security IN The Cloud
+          ↓
+Customer
+
+Shared Controls
+          ↓
+Patch Management
+Awareness & Training
+```
+
+---
+
+# CLF-C02 Takeaway
+
+When you see:
+
+* Shared Responsibility Model
+* Shared controls
+* Security ownership
+* Compliance responsibilities
+
+Think:
+
+## ✅ Awareness and Training
+
+## ✅ Patch Management
+
+These are the two most commonly tested examples of shared controls because both AWS and the customer contribute to their successful implementation.
+
+
 ---
 
 # Question 10

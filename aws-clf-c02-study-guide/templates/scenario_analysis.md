@@ -519,31 +519,17 @@ Memory optimized instances are designed for large in-memory databases.
 
 Your customer wants to know how security and compliance is shared between AWS and the customer. Under the AWS Shared Responsibility Model, what are your suggested shared controls between the customer and AWS?
 
-### Correct Answer
+(Select TWO)
 
-**Patch Management, Configuration Management, Awareness & Training**
+A. Physical and Environmental controls
 
-### Business Problem
+B. Identity and access management
 
-Understand shared controls.
+C. Data Encryption
 
-### Service Category
+D. Awareness and Training
 
-Security
-
-### Service
-
-Shared Responsibility Model
-
-### Trigger Words
-
-* shared controls
-* compliance
-* responsibility
-
-### Why This Is Correct
-
-Certain controls require participation from both AWS and customers.
+E. Patch Management
 
 ---
 

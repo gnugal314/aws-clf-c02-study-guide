@@ -1291,3 +1291,224 @@ Think:
 ## ✅ Reserved Instances
 
 These are the two primary AWS purchasing models designed specifically to reduce the cost of predictable compute workloads.
+
+
+---
+
+## Amazon EC2 Instance Purchasing Option
+
+### Original Question
+
+Your marketing team wants to run a one-day campaign to get some feedback on an upcoming product launch. You need to provision the application on an Amazon EC2 instance and it must function without interruption. Which type of instance can you use?
+
+**A. Spot Instance**
+
+**B. Dedicated Instance**
+
+**C. Reserved Instance**
+
+**D. On-Demand Instance**
+
+---
+
+# Correct Answer
+
+## ✅ D. On-Demand Instance
+
+---
+
+# Business Problem
+
+Deploy a short-term EC2 workload that must remain available for the duration of a one-day marketing campaign without interruption.
+
+---
+
+# Service Category
+
+Billing & Cost Optimization
+
+---
+
+# Service
+
+Amazon EC2 On-Demand Instance
+
+---
+
+# Trigger Words
+
+| Trigger Words                      | Think               |
+| ---------------------------------- | ------------------- |
+| One-day campaign                   | Short-term workload |
+| Temporary workload                 | On-Demand           |
+| Must function without interruption | Stable capacity     |
+| No long-term commitment            | On-Demand           |
+| Immediate deployment               | On-Demand           |
+
+---
+
+# Why This Is Correct
+
+On-Demand Instances are designed for:
+
+* Short-term workloads
+* Temporary projects
+* Unpredictable usage patterns
+* Immediate deployment
+* No long-term commitment
+
+The application must run:
+
+* For only one day
+* Without interruption
+
+On-Demand provides guaranteed availability without requiring a commitment.
+
+---
+
+# Business Problem → Service Category → Service
+
+```text
+One-Day Marketing Campaign
+            ↓
+Short-Term Compute Need
+            ↓
+Billing & Cost Optimization
+            ↓
+On-Demand Instance
+```
+
+---
+
+# Why A. Spot Instance Is Incorrect
+
+### What It Does
+
+Spot Instances provide the lowest-cost EC2 pricing by using unused AWS capacity.
+
+### Why Eliminate
+
+Spot Instances can be interrupted by AWS with little notice.
+
+The question explicitly states:
+
+> "must function without interruption"
+
+This immediately eliminates Spot Instances.
+
+### Trigger Words
+
+| Trigger Words          | Think |
+| ---------------------- | ----- |
+| Lowest cost            | Spot  |
+| Interruptible workload | Spot  |
+| Batch processing       | Spot  |
+
+---
+
+# Why B. Dedicated Instance Is Incorrect
+
+### What It Does
+
+Dedicated Instances run on hardware dedicated to a single customer.
+
+### Why Eliminate
+
+Dedicated Instances are typically selected for:
+
+* Compliance requirements
+* Regulatory requirements
+* Hardware isolation
+
+Nothing in the scenario indicates a need for dedicated hardware.
+
+Additionally, Dedicated Instances cost more than necessary.
+
+---
+
+# Why C. Reserved Instance Is Incorrect
+
+### What It Does
+
+Reserved Instances provide discounted pricing for predictable workloads through a one-year or three-year commitment.
+
+### Why Eliminate
+
+The workload only runs for:
+
+> One day
+
+Reserved Instances are intended for long-running workloads.
+
+A one-day campaign does not justify a long-term commitment.
+
+### Trigger Words
+
+| Trigger Words            | Think             |
+| ------------------------ | ----------------- |
+| Predictable workload     | Reserved Instance |
+| Long-running application | Reserved Instance |
+| One-year commitment      | Reserved Instance |
+
+---
+
+# Similar Services to Eliminate
+
+| Service            | Purpose                           | Why Not Correct           |
+| ------------------ | --------------------------------- | ------------------------- |
+| Spot Instance      | Lowest-cost interruptible compute | Can be interrupted        |
+| Dedicated Instance | Single-tenant hardware            | Unnecessary and expensive |
+| Reserved Instance  | Long-term discounted compute      | Requires commitment       |
+| On-Demand Instance | Short-term reliable compute       | ✅ Correct                 |
+
+---
+
+# Pricing Model Differentiation Table
+
+| Pricing Model      | Best Used For                     |
+| ------------------ | --------------------------------- |
+| On-Demand          | Short-term workloads              |
+| Reserved Instance  | Predictable long-term workloads   |
+| Spot Instance      | Interruptible workloads           |
+| Dedicated Instance | Compliance and hardware isolation |
+
+---
+
+# Exam Memory Aid
+
+```text
+Short-Term Workload
+        ↓
+On-Demand
+
+Long-Term Predictable Workload
+        ↓
+Reserved Instance
+
+Interruptible Workload
+        ↓
+Spot Instance
+
+Compliance Requirement
+        ↓
+Dedicated Instance
+```
+
+---
+
+# CLF-C02 Takeaway
+
+When you see:
+
+* Temporary project
+* One-time event
+* Short-duration workload
+* Immediate deployment
+* Must not be interrupted
+
+Think:
+
+## ✅ On-Demand Instance
+
+This is one of the most common CLF-C02 pricing questions and tests your ability to differentiate between EC2 purchasing options based on workload characteristics.
+

@@ -1512,3 +1512,251 @@ Think:
 
 This is one of the most common CLF-C02 pricing questions and tests your ability to differentiate between EC2 purchasing options based on workload characteristics.
 
+
+---
+
+## Cloud Procurement Strategy
+
+### Original Question
+
+Your company is new to AWS and has started its cloud adoption journey. You are worried that the company will encounter challenges using traditional procurement strategies and will need to adapt. What are the characteristics of a cloud procurement strategy?
+
+**(Select TWO)**
+
+**A. Outcomes Prioritized**
+
+**B. Risk-adverse**
+
+**C. Pay as you go**
+
+**D. Lengthy**
+
+**E. Predictable payments**
+
+---
+
+# Correct Answers
+
+## ✅ A. Outcomes Prioritized
+
+## ✅ C. Pay as you go
+
+---
+
+# Business Problem
+
+The company is transitioning from traditional IT procurement to cloud-based procurement and needs to understand how cloud purchasing differs from purchasing on-premises infrastructure.
+
+---
+
+# Service Category
+
+Cloud Economics & Cloud Adoption
+
+---
+
+# Service
+
+AWS Cloud Financial Model
+
+---
+
+# Trigger Words
+
+| Trigger Words           | Think                     |
+| ----------------------- | ------------------------- |
+| Cloud adoption          | Cloud economics           |
+| Procurement strategy    | Cloud financial model     |
+| Traditional procurement | On-premises purchasing    |
+| Outcomes                | Business value            |
+| Pay as you go           | Consumption-based pricing |
+
+---
+
+# Why These Answers Are Correct
+
+## ✅ A. Outcomes Prioritized
+
+Cloud procurement focuses on:
+
+* Business outcomes
+* Speed to value
+* Agility
+* Innovation
+
+Organizations shift away from purchasing infrastructure first and instead focus on:
+
+> What business result needs to be achieved?
+
+### Business Outcome
+
+```text
+Business Goal
+      ↓
+Desired Outcome
+      ↓
+Cloud Services
+      ↓
+Business Value
+```
+
+This outcome-based approach is a major cloud adoption principle.
+
+---
+
+## ✅ C. Pay as You Go
+
+One of the most important AWS Cloud benefits is:
+
+> Pay only for what you use.
+
+Organizations no longer need to:
+
+* Purchase servers upfront
+* Overprovision infrastructure
+* Make large capital investments
+
+Instead:
+
+```text
+Use Resources
+      ↓
+Consume Services
+      ↓
+Pay For Actual Usage
+```
+
+This consumption-based model is fundamental to cloud computing.
+
+---
+
+# Business Problem → Service Category → Service
+
+```text
+Need Modern Procurement Model
+            ↓
+Cloud Economics
+            ↓
+Outcome-Based Purchasing
+            ↓
+Pay-As-You-Go Consumption
+```
+
+---
+
+# Why B. Risk-Adverse Is Incorrect
+
+### Why Eliminate
+
+Cloud procurement is generally designed to:
+
+* Increase agility
+* Enable experimentation
+* Reduce barriers to innovation
+
+Traditional procurement is typically more risk-averse.
+
+Cloud adoption encourages controlled experimentation.
+
+---
+
+# Why D. Lengthy Is Incorrect
+
+### Why Eliminate
+
+Cloud procurement is intended to be:
+
+* Faster
+* More agile
+* More responsive
+
+Traditional procurement processes are often lengthy.
+
+Cloud procurement reduces procurement delays.
+
+---
+
+# Why E. Predictable Payments Is Incorrect
+
+### Why Eliminate
+
+AWS pricing is consumption-based.
+
+While costs can be forecasted and managed:
+
+* Usage may vary
+* Monthly costs may fluctuate
+
+The defining characteristic is:
+
+> Pay as you go
+
+Not:
+
+> Fixed predictable payments
+
+---
+
+# Similar Concepts to Eliminate
+
+| Concept                    | Why Not Correct                                   |
+| -------------------------- | ------------------------------------------------- |
+| Risk-Adverse               | More closely aligned with traditional procurement |
+| Lengthy Procurement Cycles | Opposite of cloud agility                         |
+| Predictable Fixed Payments | Not a core cloud procurement principle            |
+| Outcomes Prioritized       | ✅ Correct                                         |
+| Pay as You Go              | ✅ Correct                                         |
+
+---
+
+# Cloud Procurement vs Traditional Procurement
+
+| Traditional Procurement      | Cloud Procurement               |
+| ---------------------------- | ------------------------------- |
+| Capital Expenditures (CapEx) | Operational Expenditures (OpEx) |
+| Large Upfront Purchases      | Pay as You Go                   |
+| Long Procurement Cycles      | Rapid Provisioning              |
+| Infrastructure Focused       | Outcome Focused                 |
+| Fixed Capacity               | Elastic Capacity                |
+
+---
+
+# Exam Memory Aid
+
+```text
+Traditional IT
+      ↓
+Buy Infrastructure
+      ↓
+Hope It Meets Needs
+
+Cloud
+      ↓
+Focus On Outcomes
+      ↓
+Pay As You Go
+      ↓
+Scale As Needed
+```
+
+---
+
+# CLF-C02 Takeaway
+
+When you see:
+
+* Cloud adoption
+* Procurement strategy
+* Cloud economics
+* Financial model
+* Traditional vs cloud purchasing
+
+Think:
+
+## ✅ Outcomes Prioritized
+
+## ✅ Pay as You Go
+
+These are two of the foundational principles that differentiate cloud procurement from traditional infrastructure procurement.
+
+
